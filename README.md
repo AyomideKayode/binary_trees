@@ -85,9 +85,38 @@
   ayomide@Kazzywiz:~/binary_trees$
   ```
 
+3. [Delete](./3-binary_tree_delete.c) : Write a function that deletes an entire binary tree
+
+- Prototype: `void binary_tree_delete(binary_tree_t *tree);`
+- Where `tree` is a pointer to the root node of the tree to delete
+- If `tree` is `NULL`, do nothing
+
+  ```sh
+  ayomide@Kazzywiz:~/binary_trees$ valgrind ./3-del
+  ==70645== Memcheck, a memory error detector
+  ==70645== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+  ==70645== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+  ==70645== Command: ./3-del
+  ==70645==
+  .-------(098)--.
+  (012)--.       (128)--.
+  	(054)          (402)
+  ==70645==
+  ==70645== HEAP SUMMARY:
+  ==70645==     in use at exit: 0 bytes in 0 blocks
+  ==70645==   total heap usage: 10 allocs, 10 frees, 1,973 bytes allocated
+  ==70645==
+  ==70645== All heap blocks were freed -- no leaks are possible
+  ==70645==
+  ==70645== For lists of detected and suppressed errors, rerun with: -s
+  ==70645== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+  ayomide@Kazzywiz:~/binary_trees$
+  ```
+
+
+
 | Task                    | File       |
 | ----------------------- | ---------- |
-| 3. Delete               | [SOON](./) |
 | 4. Is leaf              | [SOON](./) |
 | 5. Is root              | [SOON](./) |
 | 6. Pre-order traversal  | [SOON](./) |
