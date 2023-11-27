@@ -312,13 +312,32 @@
   ayomide@Kazzywiz:~/binary_trees$
   ```
 
-| Task               | File       |
-| ------------------ | ---------- |
-| 14. Balance factor | [SOON](./) |
-| 15. Is full        | [SOON](./) |
-| 16. Is perfect     | [SOON](./) |
-| 17. Sibling        | [SOON](./) |
-| 18. Uncle          | [SOON](./) |
+14. [Balance factor](./14-binary_tree_balance.c) : Write a function that measures the balance factor of a binary tree
+
+- Prototype: `int binary_tree_balance(const binary_tree_t *tree);`
+- Where `tree` is a pointer to the root node of the tree to measure the balance factor
+- If `tree` is `NULL`, return `0`
+
+  ```sh
+  ayomide@Kazzywiz:~/binary_trees$ gcc -Wall -Wextra -Werror -pedantic binary_tree_print.c 14-binary_tree_balance.c 14-main.c 0-binary_tree_node.c 2-binary_tree_insert_right.c 1-binary_tree_insert_left.c -o 14-balance
+  ayomide@Kazzywiz:~/binary_trees$ ./14-balance
+  					.-------(098)--.
+  			.-------(045)--.       (128)--.
+  	.--(012)--.       (050)          (402)
+  .--(010)     (054)
+  (008)
+  Balance of 98: +2
+  Balance of 128: -1
+  Balance of 54: +0
+  ayomide@Kazzywiz:~/binary_trees$
+  ```
+
+| Task           | File       |
+| -------------- | ---------- |
+| 15. Is full    | [SOON](./) |
+| 16. Is perfect | [SOON](./) |
+| 17. Sibling    | [SOON](./) |
+| 18. Uncle      | [SOON](./) |
 
 ---
 
