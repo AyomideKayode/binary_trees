@@ -113,11 +113,28 @@
   ayomide@Kazzywiz:~/binary_trees$
   ```
 
+4. [Is leaf](./4-binary_tree_is_leaf.c) : Write a function that checks if a node is a leaf
 
+- Prototype: `int binary_tree_is_leaf(const binary_tree_t *node);`
+- Where `node` is a pointer to the node to check
+- Your function must return `1` if `node` is a leaf, otherwise `0`
+- If `node` is `NULL`, return `0`
+
+  ```sh
+  ayomide@Kazzywiz:~/binary_trees$ gcc -Wall -Wextra -Werror -pedantic binary_tree_print.c 4-binary_tree_is_leaf.c 4-main.c 0-binary_tree_node.c 2-binary_tree_insert_right.c -o 4-leaf
+  ayomide@Kazzywiz:~/binary_trees$ ./4-leaf
+  .-------(098)--.
+  (012)--.       (128)--.
+  	(054)          (402)
+  Is 98 a leaf: 0
+  Is 128 a leaf: 0
+  Is 402 a leaf: 1
+  ayomide@Kazzywiz:~/binary_trees$
+  ```
 
 | Task                    | File       |
 | ----------------------- | ---------- |
-| 4. Is leaf              | [SOON](./) |
+|                         |
 | 5. Is root              | [SOON](./) |
 | 6. Pre-order traversal  | [SOON](./) |
 | 7. In-order traversal   | [SOON](./) |
