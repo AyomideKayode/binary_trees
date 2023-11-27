@@ -293,7 +293,25 @@
   ayomide@Kazzywiz:~/binary_trees$
   ```
 
-13. [Nodes](./)
+13. [Nodes](./13-binary_tree_nodes.c) : Write a function that counts the nodes with at least 1 child in a binary tree
+
+- Prototype: `size_t binary_tree_nodes(const binary_tree_t *tree);`
+- Where `tree` is a pointer to the root node of the tree to count the number of nodes
+- If `tree` is `NULL`, the function must return 0
+- A `NULL` pointer is not a node
+
+  ```sh
+  ayomide@Kazzywiz:~/binary_trees$ gcc -Wall -Wextra -Werror -pedantic binary_tree_print.c 13-binary_tree_nodes.c 13-main.c 0-binary_tree_node.c 2-binary_tree_insert_right.c -o 13-nodes
+  ayomide@Kazzywiz:~/binary_trees$ ./13-nodes
+  .-------(098)--.
+  (012)--.       (128)--.
+  	(054)          (402)
+  Nodes in 98: 3
+  Nodes in 128: 1
+  Nodes in 54: 0
+  ayomide@Kazzywiz:~/binary_trees$
+  ```
+
 | Task               | File       |
 | ------------------ | ---------- |
 | 14. Balance factor | [SOON](./) |
