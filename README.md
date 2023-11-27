@@ -174,10 +174,31 @@
   ayomide@Kazzywiz:~/binary_trees$
   ```
 
+7. [In-order traversal](./7-binary_tree_inorder.c) : Write a function that goes through a binary tree using in-order traversal
+
+- Prototype: `void binary_tree_inorder(const binary_tree_t *tree, void (*func)(int));`
+- Where `tree` is a pointer to the root node of the tree to traverse
+- And `func` is a pointer to a function to call for each node. The value in the node must be passed as a parameter to this function.
+- If `tree` or `func` is `NULL`, do nothing
+
+  ```sh
+  ayomide@Kazzywiz:~/binary_trees$ gcc -Wall -Wextra -Werror -pedantic binary_tree_print.c 7-main.c 7-binary_tree_inorder.c 0-binary_tree_node.c -o 7-in
+  ayomide@Kazzywiz:~/binary_trees$ ./7-in
+  	.-------(098)-------.
+  .--(012)--.         .--(402)--.
+  (006)     (056)     (256)     (512)
+  6
+  12
+  56
+  98
+  256
+  402
+  512
+  ayomide@Kazzywiz:~/binary_trees$
+  ```
+
 | Task                    | File       |
 | ----------------------- | ---------- |
-|                         |
-| 7. In-order traversal   | [SOON](./) |
 | 8. Post-order traversal | [SOON](./) |
 | 9. Height               | [SOON](./) |
 | 10. Depth               | [SOON](./) |
