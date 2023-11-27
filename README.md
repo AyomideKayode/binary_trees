@@ -220,9 +220,27 @@
   ayomide@Kazzywiz:~/binary_trees$
   ```
 
+9. [Height](./9-binary_tree_height.c) : Write a function that measures the height of a binary tree
+
+- Prototype: `size_t binary_tree_height(const binary_tree_t *tree);`
+- Where `tree` is a pointer to the root node of the tree to measure the height.
+- If `tree` is `NULL`, your function must return `0`
+
+  ```sh
+  ayomide@Kazzywiz:~/binary_trees$ gcc -Wall -Wextra -Werror -pedantic binary_tree_print.c 9-binary_tree_height.c 9-main.c 0-binary_tree_node.c 2-binary_tree_insert_right.c -o 9-height
+  ayomide@Kazzywiz:~/binary_trees$ ./9-height
+  .-------(098)--.
+  (012)--.       (128)--.
+  	(054)          (402)
+  Height from 98: 2
+  Height from 128: 1
+  Height from 54: 0
+  ayomide@Kazzywiz:~/binary_trees$
+  ```
+
 | Task               | File       |
 | ------------------ | ---------- |
-| 9. Height          | [SOON](./) |
+|                    |
 | 10. Depth          | [SOON](./) |
 | 11. Size           | [SOON](./) |
 | 12. Leaves         | [SOON](./) |
