@@ -238,10 +238,26 @@
   ayomide@Kazzywiz:~/binary_trees$
   ```
 
+10. [Depth](./10-binary_tree_depth.c) : Write a function that measures the depth of a node in a binary tree
+
+- Prototype: `size_t binary_tree_depth(const binary_tree_t *tree);`
+- Where `tree` is a pointer to the node to measure the depth
+- If `tree` is NULL, your function must return `0`
+
+  ```sh
+  ayomide@Kazzywiz:~/binary_trees$ gcc -Wall -Wextra -Werror -pedantic binary_tree_print.c 10-binary_tree_depth.c 10-main.c 0-binary_tree_node.c 2-binary_tree_insert_right.c -o 10-depth
+  ayomide@Kazzywiz:~/binary_trees$ ./10-depth
+  .-------(098)--.
+  (012)--.       (128)--.
+  	(054)          (402)
+  Depth of 98: 0
+  Depth of 128: 1
+  Depth of 54: 2
+  ayomide@Kazzywiz:~/binary_trees$
+  ```
+
 | Task               | File       |
 | ------------------ | ---------- |
-|                    |
-| 10. Depth          | [SOON](./) |
 | 11. Size           | [SOON](./) |
 | 12. Leaves         | [SOON](./) |
 | 13. Nodes          | [SOON](./) |
