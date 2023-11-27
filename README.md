@@ -274,11 +274,28 @@
   ayomide@Kazzywiz:~/binary_trees$
   ```
 
+12. [Leaves](./12-binary_tree_leaves.c) : Write a function that counts the leaves in a binary tree
+
+- Prototype: `size_t binary_tree_leaves(const binary_tree_t *tree);`
+- Where `tree` is a pointer to the root node of the tree to count the number of leaves
+- If `tree` is `NULL`, the function must return 0
+- A `NULL` pointer is not a leaf
+
+  ```sh
+  ayomide@Kazzywiz:~/binary_trees$ gcc -Wall -Wextra -Werror -pedantic binary_tree_print.c 12-binary_tree_leaves.c 12-main.c 0-binary_tree_node.c 2-binary_tree_insert_right.c -o 12-leaves
+  ayomide@Kazzywiz:~/binary_trees$ ./12-leaves
+  .-------(098)--.
+  (012)--.       (128)--.
+  	(054)          (402)
+  Leaves in 98: 2
+  Leaves in 128: 1
+  Leaves in 54: 1
+  ayomide@Kazzywiz:~/binary_trees$
+  ```
+
+13. [Nodes](./)
 | Task               | File       |
 | ------------------ | ---------- |
-|                    |
-| 12. Leaves         | [SOON](./) |
-| 13. Nodes          | [SOON](./) |
 | 14. Balance factor | [SOON](./) |
 | 15. Is full        | [SOON](./) |
 | 16. Is perfect     | [SOON](./) |
