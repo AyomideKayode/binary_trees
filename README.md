@@ -197,19 +197,41 @@
   ayomide@Kazzywiz:~/binary_trees$
   ```
 
-| Task                    | File       |
-| ----------------------- | ---------- |
-| 8. Post-order traversal | [SOON](./) |
-| 9. Height               | [SOON](./) |
-| 10. Depth               | [SOON](./) |
-| 11. Size                | [SOON](./) |
-| 12. Leaves              | [SOON](./) |
-| 13. Nodes               | [SOON](./) |
-| 14. Balance factor      | [SOON](./) |
-| 15. Is full             | [SOON](./) |
-| 16. Is perfect          | [SOON](./) |
-| 17. Sibling             | [SOON](./) |
-| 18. Uncle               | [SOON](./) |
+8. [Post-order traversal](./8-binary_tree_postorder.c) : Write a function that goes through a binary tree using post-order traversal
+
+- Prototype: `void binary_tree_postorder(const binary_tree_t *tree, void (*func)(int));`
+- Where `tree` is a pointer to the root node of the tree to traverse
+- And `func` is a pointer to a function to call for each node. The value in the node must be passed as a parameter to this function.
+- If `tree` or `func` is NULL, do nothing
+
+  ```sh
+  ayomide@Kazzywiz:~/binary_trees$ gcc -Wall -Wextra -Werror -pedantic binary_tree_print.c 8-main.c 8-binary_tree_postorder.c 0-binary_tree_node.c -o 8-post
+  ayomide@Kazzywiz:~/binary_trees$ ./8-post
+  	.-------(098)-------.
+  .--(012)--.         .--(402)--.
+  (006)     (056)     (256)     (512)
+  6
+  56
+  12
+  256
+  512
+  402
+  98
+  ayomide@Kazzywiz:~/binary_trees$
+  ```
+
+| Task               | File       |
+| ------------------ | ---------- |
+| 9. Height          | [SOON](./) |
+| 10. Depth          | [SOON](./) |
+| 11. Size           | [SOON](./) |
+| 12. Leaves         | [SOON](./) |
+| 13. Nodes          | [SOON](./) |
+| 14. Balance factor | [SOON](./) |
+| 15. Is full        | [SOON](./) |
+| 16. Is perfect     | [SOON](./) |
+| 17. Sibling        | [SOON](./) |
+| 18. Uncle          | [SOON](./) |
 
 ---
 
