@@ -332,9 +332,26 @@
   ayomide@Kazzywiz:~/binary_trees$
   ```
 
+15. [Is full](./15-binary_tree_is_full.c) : Write a function that checks if a binary tree is full
+
+- Prototype: `int binary_tree_is_full(const binary_tree_t *tree);`
+- Where `tree` is a pointer to the root node of the tree to check
+- If `tree` is NULL, your function must return 0
+
+  ```sh
+  ayomide@Kazzywiz:~/binary_trees$ gcc -Wall -Wextra -Werror -pedantic binary_tree_print.c 15-binary_tree_is_full.c 15-main.c 0-binary_tree_node.c 2-binary_tree_insert_right.c -o 15-full
+  ayomide@Kazzywiz:~/binary_trees$ ./15-full
+  	.-------(098)--.
+  .--(012)--.       (128)--.
+  (010)     (054)          (402)
+  Is 98 full: 0
+  Is 12 full: 1
+  Is 128 full: 0
+  ayomide@Kazzywiz:~/binary_trees$
+  ```
+
 | Task           | File       |
 | -------------- | ---------- |
-| 15. Is full    | [SOON](./) |
 | 16. Is perfect | [SOON](./) |
 | 17. Sibling    | [SOON](./) |
 | 18. Uncle      | [SOON](./) |
