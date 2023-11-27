@@ -151,9 +151,32 @@
   ayomide@Kazzywiz:~/binary_trees$
   ```
 
+6. [Pre-order traversal](./6-binary_tree_preorder.c) : Write a function that goes through a binary tree using pre-order traversal
+
+- Prototype: `void binary_tree_preorder(const binary_tree_t *tree, void (*func)(int));`
+- Where `tree` is a pointer to the root node of the tree to traverse
+- And `func` is a pointer to a function to call for each node. The value in the node must be passed as a parameter to this function.
+- If `tree` or `func` is `NULL`, do nothing
+
+  ```sh
+  ayomide@Kazzywiz:~/binary_trees$ gcc -Wall -Wextra -Werror -pedantic binary_tree_print.c 6-main.c 6-binary_tree_preorder.c 0-binary_tree_node.c -o 6-pre
+  ayomide@Kazzywiz:~/binary_trees$ ./6-pre
+  	.-------(098)-------.
+  .--(012)--.         .--(402)--.
+  (006)     (056)     (256)     (512)
+  98
+  12
+  6
+  56
+  402
+  256
+  512
+  ayomide@Kazzywiz:~/binary_trees$
+  ```
+
 | Task                    | File       |
 | ----------------------- | ---------- |
-| 6. Pre-order traversal  | [SOON](./) |
+|                         |
 | 7. In-order traversal   | [SOON](./) |
 | 8. Post-order traversal | [SOON](./) |
 | 9. Height               | [SOON](./) |
