@@ -132,10 +132,27 @@
   ayomide@Kazzywiz:~/binary_trees$
   ```
 
+5. [Is root](./5-binary_tree_is_root.c) : Write a function that checks if a given node is a root
+
+- Prototype: `int binary_tree_is_root(const binary_tree_t *node);`
+- Where `node` is a pointer to the node to check
+- Your function must return `1` if `node` is a root, otherwise `0`
+- If `node` is `NULL`, return `0`
+
+  ```sh
+  ayomide@Kazzywiz:~/binary_trees$ gcc -Wall -Wextra -Werror -pedantic binary_tree_print.c 5-binary_tree_is_root.c 5-main.c 0-binary_tree_node.c 2-binary_tree_insert_right.c -o 5-root
+  ayomide@Kazzywiz:~/binary_trees$ ./5-root
+  .-------(098)--.
+  (012)--.       (128)--.
+  	(054)          (402)
+  Is 98 a root: 1
+  Is 128 a root: 0
+  Is 402 a root: 0
+  ayomide@Kazzywiz:~/binary_trees$
+  ```
+
 | Task                    | File       |
 | ----------------------- | ---------- |
-|                         |
-| 5. Is root              | [SOON](./) |
 | 6. Pre-order traversal  | [SOON](./) |
 | 7. In-order traversal   | [SOON](./) |
 | 8. Post-order traversal | [SOON](./) |
