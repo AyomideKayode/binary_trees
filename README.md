@@ -450,6 +450,27 @@
   }
   ```
 
+19. [Lowest common ancestor](./100-binary_trees_ancestor.c) : Write a function that finds the lowest common ancestor of two nodes
+
+- Prototype: `binary_tree_t *binary_trees_ancestor(const binary_tree_t *first, const binary_tree_t *second);`
+- Where first is a pointer to the first node
+- And second is a pointer to the second node
+- Your function must return a pointer to the lowest common ancestor node of the two given nodes
+- If no common ancestor was found, your function must return NULL
+
+  ```sh
+  ayomide@Kazzywiz:~/binary_trees$ gcc -Wall -Wextra -Werror -pedantic binary_tree_print.c 100-main.c 100-binary_trees_ancestor.c 0-binary_tree_node.c -o 100-ancestor
+  ayomide@Kazzywiz:~/binary_trees$ ./100-ancestor 
+        .-------(098)-------.
+    .--(012)--.         .--(402)-------.
+  (010)     (054)     (045)       .--(128)--.
+                                (092)     (065)
+  Ancestor of [12] & [402]: 98
+  Ancestor of [45] & [65]: 402
+  Ancestor of [128] & [65]: 128
+  ayomide@Kazzywiz:~/binary_trees$
+  ```
+
 ---
 
 ### Environment
