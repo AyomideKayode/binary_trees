@@ -356,32 +356,53 @@
 - Where `tree` is a pointer to the root node of the tree to check
 - If `tree` is `NULL`, your function must return `0`
 
-```sh
-ayomide@Kazzywiz:~/binary_trees$ gcc -Wall -Wextra -Werror -pedantic binary_tree_print.c 16-binary_tree_is_perfect.c 16-main.c 0-binary_tree_node.c 2-binary_tree_insert_right.c -o 16-perfect
-ayomide@Kazzywiz:~/binary_trees$ ./16-perfect 
-       .-------(098)-------.
-  .--(012)--.         .--(128)--.
-(010)     (054)     (010)     (402)
-Perfect: 1
+  ```sh
+  ayomide@Kazzywiz:~/binary_trees$ gcc -Wall -Wextra -Werror -pedantic binary_tree_print.c 16-binary_tree_is_perfect.c 16-main.c 0-binary_tree_node.c 2-binary_tree_insert_right.c -o 16-perfect
+  ayomide@Kazzywiz:~/binary_trees$ ./16-perfect
+        .-------(098)-------.
+    .--(012)--.         .--(128)--.
+  (010)     (054)     (010)     (402)
+  Perfect: 1
 
-       .-------(098)-------.
-  .--(012)--.         .--(128)-------.
-(010)     (054)     (010)       .--(402)
-                              (010)
-Perfect: 0
+        .-------(098)-------.
+    .--(012)--.         .--(128)-------.
+  (010)     (054)     (010)       .--(402)
+                                (010)
+  Perfect: 0
 
-       .-------(098)-------.
-  .--(012)--.         .--(128)-------.
-(010)     (054)     (010)       .--(402)--.
-                              (010)     (010)
-Perfect: 0
-ayomide@Kazzywiz:~/binary_trees$ 
-```
+        .-------(098)-------.
+    .--(012)--.         .--(128)-------.
+  (010)     (054)     (010)       .--(402)--.
+                                (010)     (010)
+  Perfect: 0
+  ayomide@Kazzywiz:~/binary_trees$
+  ```
 
-| Task           | File       |
-| -------------- | ---------- |
-| 17. Sibling    | [SOON](./) |
-| 18. Uncle      | [SOON](./) |
+17. [Sibling](./) : Write a function that finds the sibling of a node
+
+- Prototype: `binary_tree_t *binary_tree_sibling(binary_tree_t *node);`
+- Where node is a pointer to the node to find the sibling
+- Your function must return a pointer to the sibling node
+- If node is NULL or the parent is NULL, return NULL
+- If node has no sibling, return NULL
+
+  ```sh
+  ayomide@Kazzywiz:~/binary_trees$ gcc -Wall -Wextra -Werror -pedantic binary_tree_print.c 17-main.c 17-binary_tree_sibling.c 0-binary_tree_node.c -o 17-sibling
+  ayomide@Kazzywiz:~/binary_trees$ ./17-sibling 
+        .-------(098)-------.
+    .--(012)--.         .--(128)-------.
+  (010)     (054)     (110)       .--(402)--.
+                                (200)     (512)
+  Sibling of 12: 128
+  Sibling of 110: 402
+  Sibling of 54: 10
+  Sibling of 98: (nil)
+  ayomide@Kazzywiz:~/binary_trees$ 
+  ```
+
+| Task      | File       |
+| --------- | ---------- |
+| 18. Uncle | [SOON](./) |
 
 ---
 
