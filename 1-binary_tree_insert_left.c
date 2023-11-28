@@ -19,12 +19,14 @@ binary_tree_t *binary_tree_insert_left(binary_tree_t *parent, int value)
 		return (NULL); /* insertion error if parent is NULL */
 	}
 
+	left_node = malloc(sizeof(binary_tree_t));
+
 	if (left_node == NULL)
 		return (NULL); /* allocation error */
 
 	left_node->parent = parent;
 	left_node->n = value;
-	left_node->left = NULL;
+	left_node->left = parent->left;
 	left_node->right = NULL;
 
 	if (parent->left != NULL)
