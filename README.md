@@ -400,9 +400,26 @@
   ayomide@Kazzywiz:~/binary_trees$ 
   ```
 
-| Task      | File       |
-| --------- | ---------- |
-| 18. Uncle | [SOON](./) |
+18. [Uncle](./18-binary_tree_uncle.c) : Write a function that finds the uncle of a node
+
+- Prototype: `binary_tree_t *binary_tree_uncle(binary_tree_t *node);`
+- Where node is a pointer to the node to find the uncle
+- Your function must return a pointer to the uncle node
+- If node is NULL, return NULL
+- If node has no uncle, return NULL
+
+  ```sh
+  ayomide@Kazzywiz:~/binary_trees$ gcc -Wall -Wextra -Werror -pedantic binary_tree_print.c 18-main.c 18-binary_tree_uncle.c 0-binary_tree_node.c -o 18-uncle
+  ayomide@Kazzywiz:~/binary_trees$ ./18-uncle 
+        .-------(098)-------.
+    .--(012)--.         .--(128)-------.
+  (010)     (054)     (110)       .--(402)--.
+                                (200)     (512)
+  Uncle of 110: 12
+  Uncle of 54: 128
+  Uncle of 12: (nil)
+  ayomide@Kazzywiz:~/binary_trees$ 
+  ```
 
 ---
 
