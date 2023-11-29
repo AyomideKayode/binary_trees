@@ -551,7 +551,7 @@
   ayomide@Kazzywiz:~/binary_trees$ 
   ```
 
-22. [Rotate right]() : Write a function that performs a right-rotation on a binary tree
+22. [Rotate right](./104-binary_tree_rotate_right.c) : Write a function that performs a right-rotation on a binary tree
 
 - Prototype: `binary_tree_t *binary_tree_rotate_right(binary_tree_t *tree);`
 - Where tree is a pointer to the root node of the tree to rotate
@@ -574,6 +574,35 @@
     .--(032)-------.
   (020)       .--(064)--.
             (056)     (098)
+  ayomide@Kazzywiz:~/binary_trees$ 
+  ```
+
+24. [Is BST](./110-binary_tree_is_bst.c) : Write a function that checks if a binary tree is a valid [Binary Search Tree](https://en.wikipedia.org/wiki/Binary_search_tree)
+
+- Prototype: `int binary_tree_is_bst(const binary_tree_t *tree);`
+- Where `tree` is a pointer to the root node of the tree to check
+- Your function must return `1` if `tree` is a valid BST, and `0` otherwise
+- If `tree` is `NULL`, return `0`
+
+Properties of a Binary Search Tree:
+
+- The left subtree of a node contains only nodes with values less than the node’s value
+- The right subtree of a node contains only nodes with values greater than the node’s value
+- The left and right subtree each must also be a binary search tree
+- There must be no duplicate values
+
+  ```sh
+  ayomide@Kazzywiz:~/binary_trees$ gcc -Wall -Wextra -Werror -pedantic binary_tree_print.c 110-main.c 110-binary_tree_is_bst.c 0-binary_tree_node.c -o 110-is_bst
+  ayomide@Kazzywiz:~/binary_trees$ ./110-is_bst 
+        .-------(098)--.
+    .--(012)--.       (128)--.
+  (010)     (054)          (402)
+  Is 98 bst: 1
+  Is 12 bst: 1
+        .-------(098)-------.
+    .--(012)--.         .--(128)--.
+  (010)     (054)     (097)     (402)
+  Is 98 bst: 0
   ayomide@Kazzywiz:~/binary_trees$ 
   ```
 
