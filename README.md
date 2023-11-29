@@ -471,6 +471,29 @@
   ayomide@Kazzywiz:~/binary_trees$
   ```
 
+20. [Level-order traversal](./101-binary_tree_levelorder.c) : Write a function that goes through a binary tree using level-order traversal
+
+- Prototype: `void binary_tree_levelorder(const binary_tree_t *tree, void (*func)(int));`
+- Where `tree` is a pointer to the root node of the tree to traverse
+- And `func` is a pointer to a function to call for each node. The value in the node must be passed as a parameter to this function.
+- If `tree` or `func` is `NULL`, do nothing
+
+  ```sh
+  ayomide@Kazzywiz:~/binary_trees$ gcc -Wall -Wextra -Werror -pedantic binary_tree_print.c 101-main.c 101-binary_tree_levelorder.c 0-binary_tree_node.c 3-binary_tree_delete.c -o 101-lvl
+  ayomide@Kazzywiz:~/binary_trees$ ./101-lvl 
+        .-------(098)-------.
+    .--(012)--.         .--(402)--.
+  (006)     (056)     (256)     (512)
+  98
+  12
+  402
+  6
+  56
+  256
+  512
+  ayomide@Kazzywiz:~/binary_trees$ 
+  ```
+
 ---
 
 ### Environment
