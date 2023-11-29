@@ -551,6 +551,32 @@
   ayomide@Kazzywiz:~/binary_trees$ 
   ```
 
+22. [Rotate right]() : Write a function that performs a right-rotation on a binary tree
+
+- Prototype: `binary_tree_t *binary_tree_rotate_right(binary_tree_t *tree);`
+- Where tree is a pointer to the root node of the tree to rotate
+- Your function must return a pointer to the new root node of the tree once rotated
+
+  ```sh
+  ayomide@Kazzywiz:~/binary_trees$ gcc -Wall -Wextra -Werror -pedantic binary_tree_print.c 104-binary_tree_rotate_right.c 104-main.c 0-binary_tree_node.c -o 104-rotr
+  ayomide@Kazzywiz:~/binary_trees$ ./104-rotr 
+        .--(098)
+    .--(064)
+  (032)
+  Rotate-right 98
+    .--(064)--.
+  (032)     (098)
+
+        .-------(064)--.
+    .--(032)--.       (098)
+  (020)     (056)
+  Rotate-right 64
+    .--(032)-------.
+  (020)       .--(064)--.
+            (056)     (098)
+  ayomide@Kazzywiz:~/binary_trees$ 
+  ```
+
 ---
 
 ### Environment
