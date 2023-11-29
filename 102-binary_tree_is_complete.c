@@ -17,7 +17,7 @@ size_t countNodes(const binary_tree_t *root)
 /**
  * is_complete - sub function that check if the binary tree is complete.
  * @tree: pointer to the root node of the tree to check.
- * @indx: index.
+ * @index: index.
  * @num_nodes: number of nodes.
  *
  * Return: returns 1 if is complete, 0 otherwise.
