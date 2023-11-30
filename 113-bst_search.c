@@ -5,7 +5,8 @@
  * @tree: Pointer to the root node of the BST to search
  * @value: Value to search in the tree
  *
- * Return: Pointer to the node containing a value equal to value, or NULL if not found
+ * Return: Pointer to the node containing a value equal to value,
+ * or NULL if not found
  */
 bst_t *bst_search(const bst_t *tree, int value)
 {
@@ -16,7 +17,8 @@ bst_t *bst_search(const bst_t *tree, int value)
 
 	if (value == tree->n)
 	{
-		return ((bst_t *)tree); /* Return the current node if it contains the value */
+		/* Return the current node if it contains the value */
+		return ((bst_t *)tree);
 	}
 	else if (value < tree->n)
 	{
