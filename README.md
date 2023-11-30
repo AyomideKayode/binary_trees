@@ -636,6 +636,8 @@ Your file `0-binary_tree_node.c` will be compile during the correction
   ayomide@Kazzywiz:~/binary_trees$ 
   ```
 
+  <em> Betty 40-lines issue.</em>
+
 26. [BST - Array to BST](./112-array_to_bst.c) : Write a function that builds a Binary Search Tree from an array
 
 - Prototype: `bst_t *array_to_bst(int *array, size_t size);`
@@ -656,6 +658,31 @@ Your files `111-bst_insert.c` and `0-binary_tree_node.c` will be compiled during
   (001)     (020)     (022)     (034)                                   (095)
   ayomide@Kazzywiz:~/binary_trees$
   ```
+
+27. [BST - Search](./113-bst_search.c) : Write a function that searches for a value in a Binary Search Tree
+
+- Prototype: `bst_t *bst_search(const bst_t *tree, int value);`
+- Where `tree` is a pointer to the root node of the BST to search
+- And `value` is the value to search in the tree
+- Your function must return a pointer to the node containing a value equals to `value`
+- If `tree` is `NULL` or if nothing is found, your function must return `NULL`
+
+  ```sh
+  ayomide@Kazzywiz:~/binary_trees$ gcc -Wall -Wextra -Werror -pedantic binary_tree_print.c 113-bst_search.c 113-main.c 112-array_to_bst.c 111-bst_insert.c 0-binary_tree_node.c -o 113-bst_search
+  ayomide@Kazzywiz:~/binary_trees$ ./113-bst_search
+                                      .------------(079)-------.
+                  .-----------------(047)-------.         .--(087)--.
+        .-------(021)-------.              .--(068)     (084)     (091)-------.
+    .--(002)--.         .--(032)--.       (062)                           .--(098)
+  (001)     (020)     (022)     (034)                                   (095)
+  Found: 32
+    .--(032)--.
+  (022)     (034)
+  Node should be nil -> (nil)
+  ayomide@Kazzywiz:~/binary_trees$
+  ```
+
+
 
 ---
 
