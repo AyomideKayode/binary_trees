@@ -617,6 +617,45 @@ Properties of a Binary Search Tree:
 
 Your file `0-binary_tree_node.c` will be compile during the correction
 
+  ```sh
+  ayomide@Kazzywiz:~/binary_trees$ gcc -Wall -Wextra -Werror -pedantic binary_tree_print.c 111-bst_insert.c 111-main.c 0-binary_tree_node.c -o 111-bst_insert
+  ayomide@Kazzywiz:~/binary_trees$ ./111-bst_insert 
+  Inserted: 98
+  Inserted: 402
+  Inserted: 12
+  Inserted: 46
+  Inserted: 128
+  Inserted: 256
+  Inserted: 512
+  Inserted: 1
+  Node should be nil -> (nil)
+        .-------(098)------------.
+    .--(012)--.         .-------(402)--.
+  (001)     (046)     (128)--.       (512)
+                          (256)
+  ayomide@Kazzywiz:~/binary_trees$ 
+  ```
+
+26. [BST - Array to BST](./112-array_to_bst.c) : Write a function that builds a Binary Search Tree from an array
+
+- Prototype: `bst_t *array_to_bst(int *array, size_t size);`
+- Where `array` is a pointer to the first element of the array to be converted
+- And `size` is the number of element in the array
+- Your function must return a pointer to the root node of the created BST, or `NULL` on failure
+- If a value of the array is already present in the tree, this value must be ignored
+
+Your files `111-bst_insert.c` and `0-binary_tree_node.c` will be compiled during the correction
+
+  ```sh
+  ayomide@Kazzywiz:~/binary_trees$ gcc -Wall -Wextra -Werror -pedantic binary_tree_print.c 112-array_to_bst.c 112-main.c 111-bst_insert.c 0-binary_tree_node.c -o 112-bst_array
+  ayomide@Kazzywiz:~/binary_trees$ ./112-bst_array
+                                      .------------(079)-------.
+                  .-----------------(047)-------.         .--(087)--.
+        .-------(021)-------.              .--(068)     (084)     (091)-------.
+    .--(002)--.         .--(032)--.       (062)                           .--(098)
+  (001)     (020)     (022)     (034)                                   (095)
+  ayomide@Kazzywiz:~/binary_trees$
+  ```
 
 ---
 
