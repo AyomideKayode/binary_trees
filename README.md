@@ -697,6 +697,45 @@ Your files `111-bst_insert.c` and `0-binary_tree_node.c` will be compiled during
 - Removing the node with the value `n`
 - Searching for a node in a BST of size n
 
+30. [Is AVL](./120-binary_tree_is_avl.c) : Write a function that checks if a binary tree is a valid [AVL Tree](https://en.wikipedia.org/wiki/AVL_tree)
+
+- Prototype: `int binary_tree_is_avl(const binary_tree_t *tree);`
+- Where `tree` is a pointer to the root node of the tree to check
+- Your function must return `1` if `tree` is a valid AVL Tree, and `0` otherwise
+- If `tree` is `NULL`, return `0`
+
+Properties of an AVL Tree:
+
+- An AVL Tree is a BST
+- The difference between heights of left and right subtrees cannot be more than one
+- The left and right subtrees must also be AVL trees
+
+  ```sh
+  ayomide@Kazzywiz:~/binary_trees$ gcc -Wall -Wextra -Werror -pedantic binary_tree_print.c 120-main.c 120-binary_tree_is_avl.c 0-binary_tree_node.c -o 120-is_avl
+  ayomide@Kazzywiz:~/binary_trees$ ./120-is_avl 
+        .-------(098)--.
+    .--(012)--.       (128)--.
+  (010)     (054)          (402)
+  Is 98 avl: 1
+  Is 12 avl: 1
+        .-------(098)-------.
+    .--(012)--.         .--(128)--.
+  (010)     (054)     (097)     (402)
+  Is 98 avl: 0
+        .-------(098)--.
+    .--(012)--.       (128)--.
+  (010)     (054)          (402)--.
+                                (430)
+  Is 98 avl: 1
+        .-------(098)--.
+    .--(012)--.       (128)--.
+  (010)     (054)          (402)-------.
+                                  .--(430)
+                                (420)
+  Is 98 avl: 0
+  ayomide@Kazzywiz:~/binary_trees$ 
+  ```
+
 ---
 
 ### Environment
@@ -704,7 +743,7 @@ Your files `111-bst_insert.c` and `0-binary_tree_node.c` will be compiled during
 - Language: C
   - OS: Ubuntu 20.04 LTS
   - Compiler: gcc 9.4.0 (gcc -Wall -pedantic -Werror -Wextra -std=gnu89 \*.c -o name_of_executable)
-  - Style guidelines: [Betty style](https://github.com/holbertonschool/Betty/wiki)
+  - Style guidelines: [Betty style](https://github.com/alx-tools/Betty/wiki)
 
 ---
 
