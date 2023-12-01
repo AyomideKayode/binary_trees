@@ -691,6 +691,11 @@ Your files `111-bst_insert.c` and `0-binary_tree_node.c` will be compiled during
 - If the node to be deleted has two children, it must be replaced with its first `in-order successor` (not predecessor)
 - Your function must return a pointer to the new root node of the tree after removing the desired value
 
+29. [Big O #BST](./115-O) : What are the average time complexities of those operations on a Binary Search Tree (one answer per line):
+
+- Inserting the value `n`
+- Removing the node with the value `n`
+- Searching for a node in a BST of size n
 
 ---
 
